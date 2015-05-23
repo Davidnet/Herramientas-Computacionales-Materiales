@@ -1,0 +1,91 @@
+\documentclass{beamer}
+\usetheme{AnnArbor}
+\usefonttheme[onlymath]{serif} 
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{hyperref}
+%\usepackage{minted}
+\usepackage{adjustbox}
+\usepackage{algorithm,algorithmic}
+
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees}
+\usepackage{verbatim}
+
+
+
+\setbeamerfont{author in head/foot}{size={\fontsize{3.5pt}{5pt}\selectfont}}
+\author{ David Cardozo\inst{1}}
+% - Give the names in the same order as the appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+\title{Candidatura de TICs }
+\subtitle{Propuestas para el Consejo Estudiantil} % A subtitle is optional and this may be deleted
+%\logo{\includegraphics[height=0.8cm]{universidaddelosandes.png}\vspace{220pt}} 
+\logo{\includegraphics[height=1.5cm]{nvologo.jpg}}%\logo{\includegraphics[height=0.8cm]{universidaddelosandescolombia.png}
+\institute[Universidad de los Andes]
+{
+	\inst{1}%
+	Representante Matemáticas \\
+	Consejo Estudiantil Uniandino
+}
+\date{\today} % - Either use conference name or its abbreviation.
+\subject{PDF Information} % This is only inserted into the PDF information catalog. Can be left out. 
+%\setbeamercovered{transparent}
+%\setbeamertemplate{navigation symbols}{}
+
+\begin{document}
+\maketitle
+
+\begin{frame}[fragile, shrink]
+	\begin{tikzpicture}
+	\path[mindmap,concept color=black,text=white]
+	node[concept] {Comite de las TIC's }
+	[clockwise from=0]
+	child[concept color=green!50!black] {
+		node[concept] {Practicos}
+		[clockwise from=90]
+		child { node[concept] {Sitio Web} }
+		child { node[concept] {Apoyo a Redes Sociales (Comunicación)} }
+		child { node[concept] {Centro de Documentación} }
+		child { node[concept] {Capacitación} }
+	}  
+	child[concept color=blue] {
+		node[concept] { Talleres }
+		[clockwise from=-30]
+		child { node[concept] {Desarollo de tecnologías} }
+		child { node[concept] {Directores de Comite-Formato} }
+	}
+	child[concept color=red] { node[concept] {Comunicación} }
+	child[concept color=orange] { node[concept] {Generación de analísis}
+		[clockwise from=-40] 
+		child { node[concept] {Provedor de analísis estadístico} }
+	};
+	\end{tikzpicture}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Perfil}
+	\begin{block}{Perfil Academico}
+		Estudiante de Matemáticas, Física con opción en Educación y Gobierno 
+	\end{block}
+	\begin{block}{Experiencia}
+		Plataforma Moodle para curso de Precalculo, Monitor del proyecto $ \Sigma $, Asociado en CONECTA-TÉ, Desarrollo y evaluación del curso \emph{Herramientas Computacionales}
+	\end{block}
+	
+	\begin{block}{Tecnicos}
+		\LaTeX, R, iPython, Unix y Web development.
+	\end{block}
+\end{frame}
+
+
+
+\end{document}
